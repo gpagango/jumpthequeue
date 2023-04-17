@@ -2,21 +2,29 @@ package com.devonfw.application.jtqj.visitormanagement.dataaccess.api;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
+import com.devonfw.application.jtqj.general.common.api.validation.EmailExtended;
+import com.devonfw.application.jtqj.general.common.api.validation.Phone;
 import com.devonfw.application.jtqj.general.dataaccess.api.ApplicationPersistenceEntity;
 import com.devonfw.application.jtqj.visitormanagement.common.api.Visitor;
 
 /**
  * TODO gpagango This type ...
  */
+
 @Entity
 @Table(name = "Visitor")
 public class VisitorEntity extends ApplicationPersistenceEntity implements Visitor {
 
+  @NotNull
+  @EmailExtended
   private String username;
 
   private String name;
 
+  @NotNull
+  @Phone
   private String phoneNumber;
 
   private String password;
@@ -32,6 +40,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @return username
    */
+  @Override
   public String getUsername() {
 
     return this.username;
@@ -40,6 +49,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @param username new value of {@link #getusername}.
    */
+  @Override
   public void setUsername(String username) {
 
     this.username = username;
@@ -48,6 +58,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @return name
    */
+  @Override
   public String getName() {
 
     return this.name;
@@ -56,6 +67,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @param name new value of {@link #getname}.
    */
+  @Override
   public void setName(String name) {
 
     this.name = name;
@@ -64,6 +76,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @return phoneNumber
    */
+  @Override
   public String getPhoneNumber() {
 
     return this.phoneNumber;
@@ -72,6 +85,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @param phoneNumber new value of {@link #getphoneNumber}.
    */
+  @Override
   public void setPhoneNumber(String phoneNumber) {
 
     this.phoneNumber = phoneNumber;
@@ -80,6 +94,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @return password
    */
+  @Override
   public String getPassword() {
 
     return this.password;
@@ -88,6 +103,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @param password new value of {@link #getpassword}.
    */
+  @Override
   public void setPassword(String password) {
 
     this.password = password;
@@ -96,6 +112,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @return acceptedCommercial
    */
+  @Override
   public Boolean getAcceptedCommercial() {
 
     return this.acceptedCommercial;
@@ -104,6 +121,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @param acceptedCommercial new value of {@link #getacceptedCommercial}.
    */
+  @Override
   public void setAcceptedCommercial(Boolean acceptedCommercial) {
 
     this.acceptedCommercial = acceptedCommercial;
@@ -112,6 +130,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @return acceptedTerms
    */
+  @Override
   public Boolean getAcceptedTerms() {
 
     return this.acceptedTerms;
@@ -120,6 +139,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @param acceptedTerms new value of {@link #getacceptedTerms}.
    */
+  @Override
   public void setAcceptedTerms(Boolean acceptedTerms) {
 
     this.acceptedTerms = acceptedTerms;
@@ -128,6 +148,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @return userType
    */
+  @Override
   public Boolean getUserType() {
 
     return this.userType;
@@ -136,6 +157,7 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
   /**
    * @param userType new value of {@link #getuserType}.
    */
+  @Override
   public void setUserType(Boolean userType) {
 
     this.userType = userType;
