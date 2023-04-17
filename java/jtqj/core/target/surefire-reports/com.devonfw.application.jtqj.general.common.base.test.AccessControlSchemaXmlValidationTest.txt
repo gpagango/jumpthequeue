@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.devonfw.application.jtqj.general.common.base.test.AccessControlSchemaXmlValidationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.596 s - in com.devonfw.application.jtqj.general.common.base.test.AccessControlSchemaXmlValidationTest
